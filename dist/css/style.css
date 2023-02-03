@@ -559,25 +559,81 @@ a {
 }
 
 .main-nav__list {
-  margin-bottom: 12px;
+  margin-bottom: 10px;
+}
+
+.site-list__inner {
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-transition: 1.5s all ease-in-out;
+  -o-transition: 1.5s all ease-in-out;
+  transition: 1.5s all ease-in-out;
+  overflow-y: auto;
+}
+
+.site-list__item--active:hover .site-list__inner {
+  max-height: 800px;
+  opacity: 1;
+  visibility: visible;
+  -webkit-user-select: auto;
+     -moz-user-select: auto;
+      -ms-user-select: auto;
+          user-select: auto;
 }
 
 .site-list__link {
   display: block;
-  padding: 10px 0;
+  padding: 11.5px 0;
+  font-size: 16px;
+  -webkit-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  transition: 0.3s all;
+}
+
+.site-list__link:hover,
+.site-list__link:focus {
+  color: #726dee;
+}
+
+.site-list__link:active {
+  opacity: 0.6;
 }
 
 .site-list__item--active {
-  margin-bottom: 8px;
+  -webkit-transition: 1.5s all ease-in-out;
+  -o-transition: 1.5s all ease-in-out;
+  transition: 1.5s all ease-in-out;
 }
 
-.site-list__item--active .site-list__link {
-  margin-bottom: 8px;
+.site-list__item--active:hover {
+  margin-bottom: 7px;
+}
+
+.site-list__item--active:first-child:hover .site-list__link {
+  margin-bottom: 5px;
 }
 
 .site-list__inner-link {
+  font-size: 16px;
   display: block;
-  padding: 10px 0;
+  padding: 12px 22px;
+  -webkit-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  transition: 0.3s all;
+}
+
+.site-list__inner-link:hover,
+.site-list__inner-link:focus {
+  color: #211adb;
+}
+
+.site-list__inner-link:active {
+  opacity: 0.6;
 }
 
 .site-list__inner-item--icon .site-list__inner-link {
@@ -605,7 +661,7 @@ a {
 
 .login-list {
   text-align: center;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .login-list__item:last-child .login-list__link {
@@ -615,18 +671,147 @@ a {
 
 .login-list__link {
   display: block;
-  padding: 12px 0;
+  padding: 13px 0;
+  -webkit-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  transition: 0.3s all;
+}
+
+.login-list__link:hover,
+.login-list__link:focus {
+  color: #726dee;
+}
+
+.login-list__link:active {
+  opacity: 0.6;
 }
 
 @media (max-width: 767px) {
+@-webkit-keyframes menuAnimate {
+    from {
+      top: -100%;
+      left: 0;
+      z-index: -1;
+    }
+
+    50% {
+      left: 0;
+      top: 0;
+    }
+
+    to {
+      left: 135px;
+      top: 0;
+      z-index: 5;
+      top: 0;
+      -webkit-user-select: auto;
+              user-select: auto;
+      visibility: visible;
+    }
+}
+@keyframes menuAnimate {
+    from {
+      top: -100%;
+      left: 0;
+      z-index: -1;
+    }
+
+    50% {
+      left: 0;
+      top: 0;
+    }
+
+    to {
+      left: 135px;
+      top: 0;
+      z-index: 5;
+      top: 0;
+      -webkit-user-select: auto;
+         -moz-user-select: auto;
+          -ms-user-select: auto;
+              user-select: auto;
+      visibility: visible;
+    }
+}
+
+@-webkit-keyframes menuAnimateReverse {
+    from {
+      left: 135px;
+      top: 0;
+      z-index: 5;
+      top: 0;
+      -webkit-user-select: auto;
+              user-select: auto;
+      visibility: visible;
+    }
+
+    50% {
+      left: 0;
+      top: 0;
+    }
+
+    to {
+      top: -100%;
+      left: 0;
+      z-index: -1;
+    }
+}
+
+@keyframes menuAnimateReverse {
+    from {
+      left: 135px;
+      top: 0;
+      z-index: 5;
+      top: 0;
+      -webkit-user-select: auto;
+         -moz-user-select: auto;
+          -ms-user-select: auto;
+              user-select: auto;
+      visibility: visible;
+    }
+
+    50% {
+      left: 0;
+      top: 0;
+    }
+
+    to {
+      top: -100%;
+      left: 0;
+      z-index: -1;
+    }
+}
+
   .main-nav__wrapper {
     position: fixed;
+    height: 100vh;
     padding: 70px 20px 70px 24px;
     z-index: 5;
-    top: 0;
     bottom: 0;
     right: 0;
-    left: 135px;
     background-color: #ffffff;
+    -webkit-animation: menuAnimateReverse 2s forwards ease;
+            animation: menuAnimateReverse 2s forwards ease;
+    visibility: hidden;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
+
+  .main-nav__wrapper::before {
+    content: "";
+    position: absolute;
+    left: -135px;
+    width: 135px;
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .main-nav--opened .main-nav__wrapper {
+    -webkit-animation: menuAnimate 2s forwards ease;
+            animation: menuAnimate 2s forwards ease;
   }
 }
