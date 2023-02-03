@@ -1,0 +1,39 @@
+.site-list__link {
+  display: block;
+  padding: 10px 0;
+}
+
+.site-list__item--active {
+  margin-bottom: 8px;
+}
+
+.site-list__item--active .site-list__link{
+  margin-bottom: 8px;
+}
+
+.site-list__inner-link {
+  display: block;
+  padding: 10px 0;
+}
+
+.site-list__inner-item--icon .site-list__inner-link {
+  padding-left: 56px;
+  background-repeat: no-repeat;
+  background-size: 27px;
+  background-position: 20px center;
+}
+
+.site-list__inner-item--icon {
+  &:nth-child(1) a {
+    background-image: url('@img/icons/icons.svg#icon-todo')
+  }
+  &:nth-child(2) a {
+    background-image: url('@img/icons/icons.svg#icon-calendar')
+  }
+  &:nth-child(3) a {
+    background-image: url('@img/icons/icons.svg#icon-reminders')
+  }
+  &:nth-child(4) a {
+    background-image: url('@img/icons/icons.svg#icon-planning')
+  }
+}

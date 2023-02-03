@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body class=index-body>
+  <header class="header">
+    <div class="header__container container">
+      <nav class="header__nav main-nav main-nav--opened">
+        <a href="#" class="main-nav__logo logo">
+          <img src="img/svg/logo.svg" alt="Логотип" width="85">
+        </a>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item site-list__item--active">
+              <a href="#" class="site-list__link">Features</a>
+              <ul class="site-list__inner">
+                <li class="site-list__inner-item site-list__inner-item--icon">
+                  <a href="#" class="site-list__inner-link">Tado List</a>
+                </li>
+                <li class="site-list__inner-item site-list__inner-item--icon">
+                  <a href="#" class="site-list__inner-link">Celandar</a>
+                </li>
+                <li class="site-list__inner-item site-list__inner-item--icon">
+                  <a href="#" class="site-list__inner-link">Reminders</a>
+                </li>
+                <li class="site-list__inner-item site-list__inner-item--icon">
+                  <a href="#" class="site-list__inner-link">Planning</a>
+                </li>
+              </ul>
+            </li>
+            <li class="site-list__item">
+              <a href="#" class="site-list__link">Company</a>
+            </li>
+            <li class="site-list__item">
+              <a href="#" class="site-list__link">Careers</a>
+            </li>
+            <li class="site-list__item">
+              <a href="#" class="site-list__link">About</a>
+            </li>
+          </ul>
+          <ul class="main-nav__list-login login-list">
+            <li class="login-list__item">
+              <a href="#" class="login-list__link">Login</a>
+            </li>
+            <li class="login-list__item">
+              <a href="#" class="login-list__link">Register</a>
+            </li>
+          </ul>
+        </div>
+        <button class="main-nav__button button" arial-label="Открыть меню"></button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Features
+  Company
+  Careers
+  About
+
+  Login
+  Register
+
+  Make remote work
+
+  Get your team in sync, no matter your location. Streamline processes, 
+  create team rituals, and watch productivity soar.
+
+  Learn more
+   -->
+  </main>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+  <script src="js/app.min.js"></script>
+</body>
+
+</html>

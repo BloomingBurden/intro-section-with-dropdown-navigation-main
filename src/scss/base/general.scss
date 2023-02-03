@@ -1,0 +1,77 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+::placeholder {
+  color: #666
+}
+
+::selection {
+  background-color: $accent;
+}
+
+input,
+textarea {
+  outline: none;
+}
+
+body {
+  height: 100%;
+  font-family: $userfont;
+	font-size: $fontsize;
+	line-height: $lineheight;
+	color: $textcolor;
+	min-width: 320px;
+	position: relative;
+	overflow-x: hidden;
+  word-wrap: break-word;
+  font-weight: 500;
+  background-color: $almostwhite;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; 
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  font: inherit;
+  color: $textcolor;
+}
+
+.button {
+  display: block;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+}
+
+.container {
+  min-width: $mobileW;
+  max-width: $desktopW;
+  margin: 0 auto;
+  padding: 0 17px;
+}
