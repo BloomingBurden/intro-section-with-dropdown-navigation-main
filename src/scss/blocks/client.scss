@@ -1,0 +1,29 @@
+.client {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.client__item {
+  margin-right: 25px;
+  margin-bottom: 10px;
+
+  &:nth-child(1) {
+    width: 90px;
+  }
+  &:nth-child(2) {
+    width: 50px;
+  }
+  &:nth-child(3) {
+    width: 70px;
+  }
+
+  &:nth-child(4) {
+    width: 60px;
+  }
+
+  &:last-child {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+}
