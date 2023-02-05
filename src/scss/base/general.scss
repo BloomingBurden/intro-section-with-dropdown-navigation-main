@@ -76,3 +76,7 @@ a {
   @include adaptive('padding-left', 17, 43, 375);
   @include adaptive('padding-right', 17, 43, 375);
 }
+
+.attribution {
+  padding: 30px;
+}

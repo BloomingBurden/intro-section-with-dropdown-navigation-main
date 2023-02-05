@@ -1,3 +1,9 @@
+.descr {
+  @media (min-width: $desktopW) {
+    padding: 45px 0;
+  }
+}
+
 .descr__container {
   padding: 0;
   display: flex;
@@ -15,9 +21,12 @@
 
 .descr__body {
   padding: 0 15px;
-
+  
   @media (min-width: $desktopW) {
+    flex: 0 1 600px;
+    text-align: left;
     padding: 0 35px;
+    padding-top: 102px;
   }
 }
 
@@ -26,6 +35,12 @@
   font-size: 35px;
   margin: 0;
   margin-bottom: 17px;
+
+  @media (min-width: $desktopW) {
+    font-size: 80px;
+    line-height: 1;
+    margin-bottom: 48px;
+  }
 }
 
 .descr__text {
@@ -33,6 +48,12 @@
   font-size: 16px;
   margin: 0;
   margin-bottom: 25px;
+
+  @media (min-width: $desktopW) {
+    font-size: inherit;
+    padding-right: 50px;
+    margin-bottom: 50px;
+  }
 }
 
 .descr__button {
@@ -51,6 +72,14 @@
   &:focus {
     background-color: $lightblue;
   }
+
+  @media (min-width: $desktopW) {
+    margin: 0;
+    padding: 19px;
+    width: 165px;
+    font-size: inherit;
+    margin-bottom: 110px;
+  }
 }
 
 .descr__header {
@@ -60,5 +89,7 @@
 
   @media (min-width: $desktopW) {
     order: 0;
+    flex: 0 0 480px;
+    margin-bottom: 0;
   }
 }
