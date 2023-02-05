@@ -1,11 +1,29 @@
 .login-list {
   text-align: center;
   font-size: 14px;
+  flex-shrink: 0;
+
+  @media (min-width: $tableW) {
+    display: flex;
+    width: 178px;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 .login-list__item:last-child .login-list__link {
   border: 1px solid #000000;
   border-radius: 15px;
+
+  @media (min-width: $tableW) {
+    padding: 11px 20px;
+  }
+}
+
+.login-list__item:first-child {
+  @media (min-width: $tableW) {
+    margin-right: 10px;
+  }
 }
 
 .login-list__link {

@@ -73,5 +73,6 @@ a {
   min-width: $mobileW;
   max-width: $desktopW;
   margin: 0 auto;
-  padding: 0 17px;
+  @include adaptive('padding-left', 17, 43, 375);
+  @include adaptive('padding-right', 17, 43, 375);
 }
